@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renaissance Ka-Maaya | Revitalisation des valeurs ancestrales africaines</title>
+    <meta name="description" content="Renaissance Ka-Maaya est une association dédiée à la revitalisation des valeurs ancestrales africaines, promouvant la culture, la spiritualité et les traditions.">
+    <meta name="keywords" content="Renaissance Ka-Maaya, valeurs africaines, culture africaine, traditions africaines, spiritualité africaine, kemite, maaya, africa, spirituality">
+    <meta name="author" content="Renaissance Ka-Maaya">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://i.ibb.co/wZTDD5Zx/logo-renaissance.png">
+    
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-red: #E50000;
+            --primary-green: #008000;
+            --primary-yellow: #FFCB00;
+            --black: #000000;
+            --white: #FFFFFF;
+            --dark-bg: #121212;
+            --dark-card: #1E1E1E;
+            --dark-text: #E0E0E0;
+        }
+        
+        /* Base Styles */
+        .formulaire-association {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      padding: 20px;
+    }
+
+    .formulaire-association form {
+      max-width: 600px;
+      margin: auto;
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .formulaire-association h2 {
+      text-align: center;
+      color: #e60000;
+      margin-bottom: 25px;
+    }
+
+    .formulaire-association input,
+    .formulaire-association select,
+    .formulaire-association textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+      background-color: #fff;
+    }
+
+    .formulaire-association input::placeholder,
+    .formulaire-association textarea::placeholder {
+      color: #999;
+    }
+
+    .formulaire-association label {
+      font-size: 14px;
+      display: block;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    .formulaire-association .checkbox-group {
+      margin-bottom: 20px;
+    }
+
+    .formulaire-association .checkbox-group label {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      gap: 8px;
+    }
+
+    .formulaire-association button {
+      background-color: #007500;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.2s ease;
+    }
+
+    .formulaire-association button:hover {
+      background-color: #005a00;
+    }
+
+    @media (max-width: 600px) {
+      .formulaire-association form {
+        padding: 20px;
+      }
+    }
+
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Raleway', sans-serif;
+        }
+        
+        /* Dark Mode Styles */
+        .dark {
+            background-color: var(--dark-bg);
+            color: var(--dark-text);
+        }
+        
+        .dark .bg-white {
+            background-color: var(--dark-card) !important;
+        }
+        
+        .dark .text-gray-800, .dark .text-black {
+            color: var(--dark-text) !important;
+        }
+        
+        .dark .border-gray-200 {
+            border-color: #333 !important;
+        }
+        
+        .dark .shadow-lg {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.2) !important;
+        }
+        
+        .dark .bg-gray-100 {
+            background-color: #1a1a1a !important;
+        }
+        
+        /* Parallax Effect */
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .parallax::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        @keyframes scaleUp {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        
+        .animate-fade-in {
+            opacity: 0;
+            animation: fadeIn 0.8s ease forwards;
+        }
+        
+        .animate-slide-in {
+            opacity: 0;
+            animation: slideInRight 0.8s ease forwards;
+        }
+        
+        .animate-scale-up {
+            opacity: 0;
+            animation: scaleUp 0.8s ease forwards;
+        }
+        
+        /* Animation Delays */
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+        
+        /* Custom Button Styles */
+        .btn-primary {
+            background-color: var(--primary-red);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s ease;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(229, 0, 0, 0.2);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(229, 0, 0, 0.3);
+        }
+        
+        .btn-secondary {
+            background-color: var(--primary-green);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s ease;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 128, 0, 0.2);
+        }
+        
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 128, 0, 0.3);
+        }
+        
+        .btn-tertiary {
+            background-color: var(--primary-yellow);
+            color: black;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s ease;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(255, 203, 0, 0.2);
+        }
+        
+        .btn-tertiary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(255, 203, 0, 0.3);
+        }
+        
+        /* Timeline Style */
+        .timeline-container {
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: linear-gradient(to bottom, var(--primary-red), var(--primary-green), var(--primary-yellow));
+            border-radius: 2px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -39px;
+            top: 5px;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background-color: var(--primary-red);
+            border: 4px solid white;
+            z-index: 1;
+        }
+        
+        .timeline-item:nth-child(2)::before {
+            background-color: var(--primary-green);
+        }
+        
+        .timeline-item:nth-child(3)::before {
+            background-color: var(--primary-yellow);
+        }
+        
+        .timeline-item:nth-child(4)::before {
+            background-color: var(--primary-red);
+        }
+        
+        /* Custom Card Hover */
+        .custom-card {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .custom-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        /* Mobile Menu Animation */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            z-index: 50;
+            transform: translateX(-100%);
+            transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+        
+        .mobile-menu-link {
+            font-size: 24px;
+            margin: 15px 0;
+            color: white;
+            position: relative;
+            text-transform: uppercase;
+            font-weight: 600;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-menu.open .mobile-menu-link {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .mobile-menu-link:nth-child(1) { transition-delay: 0.1s; }
+        .mobile-menu-link:nth-child(2) { transition-delay: 0.2s; }
+        .mobile-menu-link:nth-child(3) { transition-delay: 0.3s; }
+        .mobile-menu-link:nth-child(4) { transition-delay: 0.4s; }
+        .mobile-menu-link:nth-child(5) { transition-delay: 0.5s; }
+        .mobile-menu-link:nth-child(6) { transition-delay: 0.6s; }
+        
+        .mobile-menu-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary-red);
+            transition: width 0.3s ease;
+        }
+        
+        .mobile-menu-link:hover::after {
+            width: 100%;
+        }
+        
+        .hamburger {
+            position: relative;
+            width: 30px;
+            height: 24px;
+            cursor: pointer;
+            z-index: 100;
+        }
+        
+        .hamburger span {
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            background-color: currentColor;
+            border-radius: 3px;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: .25s ease-in-out;
+        }
+        
+        .hamburger span:nth-child(1) { top: 0px; }
+        .hamburger span:nth-child(2), .hamburger span:nth-child(3) { top: 10px; }
+        .hamburger span:nth-child(4) { top: 20px; }
+        
+        .hamburger.open span:nth-child(1) {
+            top: 10px;
+            width: 0%;
+            left: 50%;
+        }
+        
+        .hamburger.open span:nth-child(2) {
+            transform: rotate(45deg);
+        }
+        
+        .hamburger.open span:nth-child(3) {
+            transform: rotate(-45deg);
+        }
+        
+        .hamburger.open span:nth-child(4) {
+            top: 10px;
+            width: 0%;
+            left: 50%;
+        }
+        
+        /* Social Icons */
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--primary-red);
+            color: white;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(229, 0, 0, 0.3);
+        }
+        
+        .social-icon:nth-child(2) {
+            background-color: var(--primary-green);
+        }
+        
+        .social-icon:nth-child(2):hover {
+            box-shadow: 0 5px 15px rgba(0, 128, 0, 0.3);
+        }
+        
+        .social-icon:nth-child(3) {
+            background-color: var(--primary-yellow);
+            color: black;
+        }
+        
+        .social-icon:nth-child(3):hover {
+            box-shadow: 0 5px 15px rgba(255, 203, 0, 0.3);
+        }
+        
+        /* Improved Parallax Effect */
+        .parallax-content {
+            transform: translateZ(0);
+            will-change: transform;
+        }
+        
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .scroll-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Dark Mode Toggle */
+        .dark-mode-toggle {
+            position: relative;
+            width: 60px;
+            height: 30px;
+            border-radius: 15px;
+            background-color: #f0f0f0;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: flex;
+            align-items: center;
+            padding: 0 5px;
+        }
+        
+        .dark .dark-mode-toggle {
+            background-color: #333;
+        }
+        
+        .toggle-thumb {
+            position: absolute;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transform: translateX(0);
+            transition: transform 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #ffc107;
+        }
+        
+        .dark .toggle-thumb {
+            transform: translateX(30px);
+            background-color: #121212;
+            color: #f5f5f5;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-800">
+    
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 w-full bg-white dark:bg-dark-bg shadow-md z-40 px-4 md:px-6 py-2 transition-all duration-300">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#home" class="flex items-center">
+                <img src="https://i.ibb.co/wZTDD5Zx/logo-renaissance.png" alt="Logo Renaissance Ka-Maaya" class="h-12 md:h-16">
+                <span class="ml-3 text-xl font-bold text-gray-800 dark:text-white hidden md:block">Renaissance Ka-Maaya</span>
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="font-medium text-gray-800 dark:text-white hover:text-red-600 dark:hover:text-red-400 transition-colors">Accueil</a>
+                <a href="#about" class="font-medium text-gray-800 dark:text-white hover:text-red-600 dark:hover:text-red-400 transition-colors">À propos</a>
+                <a href="#actions" class="font-medium text-gray-800 dark:text-white hover:text-red-600 dark:hover:text-red-400 transition-colors">Nos actions</a>
+                <a href="#support" class="font-medium text-gray-800 dark:text-white hover:text-red-600 dark:hover:text-red-400 transition-colors">Nous soutenir</a>
+                <a href="#contact" class="font-medium text-gray-800 dark:text-white hover:text-red-600 dark:hover:text-red-400 transition-colors">Contact</a>
+                <a href="#legal" class="font-medium text-gray-800 dark:text-white hover:text-red-600 dark:hover:text-red-400 transition-colors">Mentions légales</a>
+                
+                <!-- Dark Mode Toggle -->
+                <div class="dark-mode-toggle" id="darkModeToggle">
+                    <div class="toggle-thumb">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile Hamburger -->
+            <div class="md:hidden flex items-center">
+                <div class="dark-mode-toggle mr-4" id="mobileDarkModeToggle">
+                    <div class="toggle-thumb">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                </div>
+                <div class="hamburger" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#home" class="mobile-menu-link" onclick="closeMobileMenu()">Accueil</a>
+        <a href="#about" class="mobile-menu-link" onclick="closeMobileMenu()">À propos</a>
+        <a href="#actions" class="mobile-menu-link" onclick="closeMobileMenu()">Nos actions</a>
+        <a href="#support" class="mobile-menu-link" onclick="closeMobileMenu()">Nous soutenir</a>
+        <a href="#contact" class="mobile-menu-link" onclick="closeMobileMenu()">Contact</a>
+        <a href="#legal" class="mobile-menu-link" onclick="closeMobileMenu()">Mentions légales</a>
+        
+        <div class="flex mt-10">
+            <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="social-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </div>
+    
+    <!-- Hero Section -->
+    <section id="home" class="parallax min-h-screen flex items-center justify-center" style="background-image: url('https://i.ibb.co/0VvQVyG1/sunset-savannah.jpg');">
+        <div class="parallax-content z-10 text-center max-w-5xl px-4 py-20">
+            <img src="https://i.ibb.co/wZTDD5Zx/logo-renaissance.png" alt="Logo Renaissance Ka-Maaya" class="h-32 mx-auto mb-8 animate-scale-up">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">Renaissance Ka-Maaya</h1>
+            <p class="text-xl md:text-2xl text-white mb-10 animate-fade-in delay-200">Revitaliser les valeurs ancestrales africaines</p>
+            <p class="text-lg text-white mb-10 animate-fade-in delay-300 max-w-3xl mx-auto">Nous œuvrons pour la promotion de la culture, la spiritualité et les traditions africaines, essentielles pour la paix et l'harmonie de nos communautés.</p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 animate-fade-in delay-400">
+                <a href="#about" class="btn-primary w-full sm:w-auto">Découvrir notre mission</a>
+                <a href="#support" class="btn-secondary w-full sm:w-auto">Nous soutenir</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6 scroll-reveal">À propos de nous</h2>
+                <div class="w-24 h-1 bg-red-600 mx-auto mb-10 scroll-reveal"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-10 items-center mb-20">
+                <div class="scroll-reveal">
+                    <p class="text-lg mb-6">
+                        Renaissance Kamaaya est une association passionnée par la revitalisation des valeurs ancestrales africaines, en particulier la culture, la spiritualité et les traditions. Nous croyons que ces valeurs sont profondément enracinées dans l'identité africaine et sont essentielles pour promouvoir le respect, la paix et l'harmonie dans nos communautés.
+                    </p>
+                    <p class="text-lg mb-6">
+                        Nous travaillons sans relâche pour sensibiliser les gens à l'importance de ces valeurs et pour les intégrer dans notre vie quotidienne. En tant que membres de Renaissance Kamaaya, nous nous engageons à promouvoir la fierté et la solidarité africaines, ainsi qu'à préserver ces valeurs pour les générations futures.
+                    </p>
+                    <p class="text-lg">
+                        Rejoignez-nous dans notre quête pour redécouvrir les merveilles de la culture africaine à travers la Renaissance Kamaaya!
+                    </p>
+                </div>
+                <div class="scroll-reveal">
+                    <img src="https://i.ibb.co/HDndz2nr/bannier.png" alt="Culture africaine" class="rounded-lg shadow-xl w-full h-96 object-cover">
+                </div>
+            </div>
+            
+            <div class="mb-20">
+                <h3 class="text-2xl md:text-4xl font-bold mb-10 scroll-reveal">Notre histoire</h3>
+                <div class="timeline-container">
+                    <div class="timeline-item scroll-reveal">
+                        <h4 class="text-xl font-bold mb-2">Création de l'association</h4>
+                        <p>Renaissance Ka-Maaya est née de la volonté de préserver les valeurs ancestrales africaines face à la mondialisation.</p>
+                    </div>
+                    <div class="timeline-item scroll-reveal">
+                        <h4 class="text-xl font-bold mb-2">Start’in Events</h4>
+                        <p>Distribution alimentaire auprès des migrants en situation de précarité administrative et qui ont des difficultés à se loger - Organisation de rencontres culturelles et de cérémonies traditionnelles pour sensibiliser le public - Campagne de sensibilisation à l’écologie pour une bonne gestion de l’environnement. 
+                        </p>
+                    </div>
+                    <div class="timeline-item scroll-reveal">
+                        <h4 class="text-xl font-bold mb-2">Expansion des activités</h4>
+                        <p>A moyen terme : Formation Développement personnel/Leadership/Entrepreneurship -  Foire interculturelles en vue de faire découvrir les cultures et savoirs-faire africains - Mise en place d’une jurisprudence ainsi que d’une protection juridique pour les adhérents de la communauté REKAMA. 
+                        </p>
+                    </div>
+                    <div class="timeline-item scroll-reveal">
+                        <h4 class="text-xl font-bold mb-2">A long terme</h4>
+                        <p>Renforcement de la communication autour de l’africanité à travers la création d’une antenne radio et télé - Création d’un centre de formation orienté vers la science et la technique - Création d’un centre d’accueil et d’orientation pour les primo-arrivants en Europe.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- DÉBUT SECTION ÉQUIPE - Cette section peut être facilement supprimée si nécessaire -->
+            <!-- Supprimer tout le bloc ci-dessous si vous ne souhaitez pas afficher l'équipe -->
+            <div class="team-section">
+                <h3 class="text-2xl md:text-4xl font-bold mb-10 scroll-reveal">Notre équipe</h3>
+                <div class="grid md:grid-cols-3 gap-10">
+                    <div class="bg-white dark:bg-dark-card rounded-lg shadow-lg overflow-hidden custom-card scroll-reveal">
+                        <img src="https://i.ibb.co/XZGGmgwX/Whats-App-Image-2025-05-02-22-20-59-f1bf063a.jpg" alt="Amadou Diallo" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold mb-2">Adama Traoré</h4>
+                            <p class="text-red-600 mb-4">Président</p>
+                            <p>Passionné par la préservation des traditions africaines et la promotion de la spiritualité ancestrale.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white dark:bg-dark-card rounded-lg shadow-lg overflow-hidden custom-card scroll-reveal">
+                        <img src="https://i.ibb.co/84G7VnTj/Whats-App-Image-2025-05-03-15-58-34-23638f9b.jpg" alt="Kofi Mensah" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold mb-2">Ballafôssêguê KOUYATÊ</h4>
+                            <p class="text-yellow-600 mb-4">Vice-président</p>
+                            <p>Gestionnaire de projets culturels et responsable du développement des partenariats internationaux.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white dark:bg-dark-card rounded-lg shadow-lg overflow-hidden custom-card scroll-reveal">
+                        <img src="https://i.ibb.co/bM8QP2LG/oubil.jpg" alt="Fatou Ndiaye" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold mb-2">Ousbil</h4>
+                            <p class="text-green-600 mb-4">Secrétaire Générale</p>
+                            <p>Spécialiste en histoire africaine et en transmission des savoirs traditionnels aux jeunes générations.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white dark:bg-dark-card rounded-lg shadow-lg overflow-hidden custom-card scroll-reveal">
+                        <img src="https://i.ibb.co/bMC2MS4p/Whats-App-Image-2025-05-02-20-06-42-c0f8bed5.jpg" alt="Kofi Mensah" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold mb-2">Oumou Dili</h4>
+                            <p class="text-yellow-600 mb-4">Trésorier</p>
+                            <p>Gestionnaire de projets culturels et responsable du développement des partenariats internationaux.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- FIN SECTION ÉQUIPE -->
+        </div>
+    </section>
+    
+    <!-- Actions Section -->
+    <section id="actions" class="py-20 px-4 bg-gray-100 dark:bg-dark-bg">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6 scroll-reveal">Nos actions</h2>
+                <div class="w-24 h-1 bg-green-600 mx-auto mb-10 scroll-reveal"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-16">
+                <div class="bg-white dark:bg-dark-card rounded-lg shadow-lg p-8 custom-card scroll-reveal">
+                    <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-book text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Éducation et sensibilisation</h3>
+                    <p class="mb-6">Organisation d'ateliers et de formations pour la transmission des savoirs traditionnels, de la langue et des pratiques culturelles africaines auprès des jeunes générations.</p>
+                    <a href="#" target="_blank" class="text-red-600 hover:text-red-800 font-semibold flex items-center">
+                        En savoir plus <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <div class="bg-white dark:bg-dark-card rounded-lg shadow-lg p-8 custom-card scroll-reveal">
+                    <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-leaf" style="color: #ffffff;"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Écologie</h3>
+                    <p class="mb-6">Sensibilisation à l'environnement pour un monde plus durable et équilibré</p>
+                    <a href="#" target="_blank" class="text-green-600 hover:text-green-800 font-semibold flex items-center">
+                        En savoir plus <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <div class="bg-white dark:bg-dark-card rounded-lg shadow-lg p-8 custom-card scroll-reveal">
+                    <div class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-hand-holding-heart" style="color: #ffffff;"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Solidarité et intégration</h3>
+                    <p class="mb-6">Accompagnement des personnes en situation de précarité administrative en France pour leur intégration. 2. Initiation et apprentissage de la culture locale et la langue locale aux primo-arrivants.</p>
+                    <a href="#" target="_blank" class="text-yellow-600 hover:text-yellow-800 font-semibold flex items-center">
+                        En savoir plus <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <div class="bg-white dark:bg-dark-card rounded-lg shadow-lg p-8 custom-card scroll-reveal">
+                    <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-graduation-cap text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Solidarité et intégration</h3>
+                    <p class="mb-6">Interventions dans les écoles, conférences et publications pour sensibiliser le public à l'importance des valeurs ancestrales africaines dans le monde contemporain.</p>
+                    <a href="#" target="_blank" class="text-red-600 hover:text-red-800 font-semibold flex items-center">
+                        En savoir plus <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center scroll-reveal">
+                <a href="#" target="_blank" class="btn-primary">Découvrir toutes nos missions</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Support Section -->
+    <section id="support" class="py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6 scroll-reveal">Nous soutenir</h2>
+                <div class="w-24 h-1 bg-yellow-500 mx-auto mb-10 scroll-reveal"></div>
+                <p class="text-lg max-w-3xl mx-auto scroll-reveal">Votre soutien est essentiel pour nous permettre de poursuivre nos actions de préservation et de revitalisation des valeurs ancestrales africaines. Plusieurs options s'offrent à vous pour contribuer à notre mission.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="bg-white dark:bg-dark-card rounded-lg shadow-lg p-8 text-center custom-card scroll-reveal">
+                    <div class="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-users text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Adhésion</h3>
+                    <p class="mb-6">Devenez membre de l'association Renaissance Ka-Maaya et participez activement à nos activités et nos prises de décisions.</p>
+                    <ul class="text-left mb-8">
+                        <li class="mb-2 flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Adhésion individuelle: 20€/Mois</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Adhésion en Afrique: 5000f/Mois</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Adhésion de soutien: 50€/Mois</li>
+                    </ul>
+                    <a href="#" target="_blank" class="btn-primary w-full">Devenir membre</a>
+                </div>
+                
+                <div class="bg-white dark:bg-dark-card rounded-lg shadow-lg p-8 text-center custom-card scroll-reveal">
+                    <div class="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-hand-holding-heart text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Faire un don</h3>
+                    <p class="mb-6">Soutenez financièrement nos actions par un don ponctuel ou régulier. Vos dons sont déductibles des impôts selon la législation en vigueur.</p>
+                    <ul class="text-left mb-8">
+                        <li class="mb-2 flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Don ponctuel (montant libre)</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Don mensuel (montant libre)</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Don matériel (livres, objets culturels)</li>
+                    </ul>
+                    <a href="#" target="_blank" class="btn-secondary w-full">Faire un don</a>
+                </div>
+                
+                <div class="bg-white dark:bg-dark-card rounded-lg shadow-lg p-8 text-center custom-card scroll-reveal">
+                    <div class="w-20 h-20 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-hands-helping text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Bénévolat</h3>
+                    <p class="mb-6">Offrez de votre temps et de vos compétences pour soutenir nos activités et contribuer à la réalisation de nos projets.</p>
+                    <ul class="text-left mb-8">
+                        <li class="mb-2 flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Animation d'ateliers culturels</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Aide à l'organisation d'événements</li>
+                        <li class="mb-2 flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Compétences spécifiques (traduction, communication, etc.)</li>
+                    </ul>
+                    <a href="#" target="_blank" class="btn-tertiary w-full">Devenir bénévole</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="formulaire-association">
+        <form action="https://formsubmit.co/tounka.media@gmail.com" method="POST" enctype="multipart/form-data">
+          <h2>Formulaire d’adhésion à l’association</h2>
+    
+          <input type="text" name="nom" placeholder="Nom" required>
+          <input type="text" name="prenom" placeholder="Prénom" required>
+          <input type="email" name="email" placeholder="Adresse e-mail" required>
+          <input type="tel" name="telephone" placeholder="Téléphone">
+          <input type="text" name="pays" placeholder="Pays" required>
+    
+          <select name="type_adhesion" required>
+            <option value="" disabled selected>Choisir le type d’adhésion</option>
+            <option value="Adhésion individuelle - 20€/mois">Adhésion individuelle : 20€/mois</option>
+            <option value="Adhésion en Afrique - 5000f/mois">Adhésion en Afrique : 5000f/mois</option>
+            <option value="Adhésion de soutien - 50€/mois">Adhésion de soutien : 50€/mois</option>
+          </select>
+    
+          <textarea name="message" placeholder="Message (facultatif)"></textarea>
+          <input type="file" name="piece_jointe">
+    
+          <div class="checkbox-group">
+            <label>
+              <input type="checkbox" name="conditions" required>
+              J’accepte que mes données soient traitées conformément à la politique de confidentialité.
+            </label>
+          </div>
+    
+          <!-- Champs invisibles -->
+          <input type="hidden" name="_subject" value="Nouvelle demande d’adhésion">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://Renaissancekamaaya.org">
+    
+          <button type="submit">Envoyer ma demande</button>
+        </form>
+      </div>
+    
+    <!-- Contact Section (no form, just info) -->
+    <section id="contact" class="py-20 px-4 bg-gray-100 dark:bg-dark-bg">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6 scroll-reveal">Contact</h2>
+                <div class="w-24 h-1 bg-red-600 mx-auto mb-10 scroll-reveal"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="scroll-reveal">
+                    <h3 class="text-2xl font-bold mb-8">Nos coordonnées</h3>
+                    <div class="mb-6 flex items-start">
+                        <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-map-marker-alt text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold mb-2">Adresse</h4>
+                            <p>44 rue Jacques Offenbach<br>44600 Saint-Nazaire                                , France</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6 flex items-start">
+                        <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-envelope text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold mb-2">Email</h4>
+                            <p>rkamaaya@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6 flex items-start">
+                        <div class="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-phone text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold mb-2">Téléphone</h4>
+                            <p>+33 1 23 45 67 89</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-10">
+                        <h3 class="text-2xl font-bold mb-8">Suivez-nous</h3>
+                        <div class="flex">
+                            <a href="https://facebook.com/rkamaaya" target="_blank" class="social-icon">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://twitter.com/rkamaaya" target="_blank" class="social-icon">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://instagram.com/rkamaaya" target="_blank" class="social-icon">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://youtube.com/rkamaaya" target="_blank" class="social-icon" style="background-color: #000;">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="scroll-reveal">
+                    <div class="bg-white dark:bg-dark-card rounded-lg shadow-lg p-8 h-full">
+                        <h3 class="text-2xl font-bold mb-6">Horaires d'ouverture</h3>
+                        <div class="mb-4 pb-4 border-b border-gray-200 dark:border-gray-700">
+                            <div class="flex justify-between">
+                                <span class="font-medium">Lundi - Vendredi</span>
+                                <span>17h30 - 22h00</span>
+                            </div>
+                        </div>
+                        <div class="mb-4 pb-4 border-b border-gray-200 dark:border-gray-700">
+                            <div class="flex justify-between">
+                                <span class="font-medium">Samedi</span>
+                                <span>12h00 - 17h00</span>
+                            </div>
+                        </div>
+                        <div class="mb-8">
+                            <div class="flex justify-between">
+                                <span class="font-medium">Dimanche</span>
+                                <span>Fermé</span>
+                            </div>
+                        </div>
+                        
+                        <h3 class="text-2xl font-bold mb-6">Venir nous voir</h3>
+                        <div class="bg-gray-200 dark:bg-gray-700 rounded-lg h-64 flex items-center justify-center">
+                            <p class="text-center px-6">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2707.5764054470064!2d-2.2437478501906485!3d47.26398583745345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480568acc55f6d3b%3A0x4bf92a3dbc31db77!2s44%20Rue%20Jacques%20Offenbach%2C%2044600%20Saint-Nazaire!5e0!3m2!1sfr!2sfr!4v1746283368202!5m2!1sfr!2sfr" width="600" height="260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Legal Section -->
+    <section id="legal" class="py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6 scroll-reveal">Mentions légales</h2>
+                <div class="w-24 h-1 bg-yellow-500 mx-auto mb-10 scroll-reveal"></div>
+            </div>
+            
+            <div class="bg-white dark:bg-dark-card rounded-lg shadow-lg p-8 mb-10 scroll-reveal">
+                <h3 class="text-2xl font-bold mb-6">Informations légales</h3>
+                <p class="mb-4"><strong>Dénomination :</strong> Association Renaissance Ka-Maaya</p>
+                <p class="mb-4"><strong>Forme juridique :</strong> Association loi du 1 juillet 1901</p>
+                <p class="mb-4"><strong>Adresse du siège social :</strong> 44 rue Jacques Offenbach, 44600, Saint-Nazaire</p>
+                <p class="mb-4"><strong>Numéro RNA :</strong> W443011927</p>
+                <p class="mb-4"><strong>Directeur de la publication :</strong> Adama Traoré, Président</p>
+                <p class="mb-4"><strong>Contact :</strong> rkamaaya@gmail.com</p>
+            </div>
+            
+            <div class="bg-white dark:bg-dark-card rounded-lg shadow-lg p-8 mb-10 scroll-reveal">
+                <h3 class="text-2xl font-bold mb-6">Propriété intellectuelle</h3>
+                <p class="mb-4">L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables et les représentations iconographiques et photographiques.</p>
+                <p>La reproduction de tout ou partie de ce site sur un support électronique quel qu'il soit est formellement interdite sauf autorisation expresse du directeur de la publication.</p>
+            </div>
+            
+            <div class="bg-white dark:bg-dark-card rounded-lg shadow-lg p-8 mb-10 scroll-reveal">
+                <h3 class="text-2xl font-bold mb-6">Politique de confidentialité</h3>
+                <p class="mb-4">Conformément au Règlement Général sur la Protection des Données (RGPD), l'association Renaissance Ka-Maaya s'engage à protéger vos données personnelles.</p>
+                <p class="mb-4"><strong>Données collectées :</strong> Lorsque vous nous contactez, nous collectons votre nom, votre adresse e-mail et les informations que vous nous communiquez dans votre message.</p>
+                <p class="mb-4"><strong>Utilisation des données :</strong> Ces informations sont uniquement utilisées pour répondre à vos demandes et ne sont en aucun cas transmises à des tiers.</p>
+                <p class="mb-4"><strong>Durée de conservation :</strong> Vos données sont conservées pendant une durée de 3 ans à compter de notre dernier contact.</p>
+                <p><strong>Vos droits :</strong> Conformément à la loi, vous disposez d'un droit d'accès, de rectification, de suppression et d'opposition aux données vous concernant. Pour exercer ce droit, veuillez nous contacter à l'adresse suivante : contact@renaissance-kamaaya.com</p>
+            </div>
+            
+            <div class="bg-white dark:bg-dark-card rounded-lg shadow-lg p-8 scroll-reveal">
+                <h3 class="text-2xl font-bold mb-6">Cookies</h3>
+                <p class="mb-4">Ce site n'utilise pas de cookies de suivi. Seul un cookie technique permettant la gestion du mode sombre/clair est utilisé. Ce cookie est strictement nécessaire au fonctionnement du site et ne collecte aucune donnée personnelle.</p>
+                <h3 class="text-2xl font-bold mb-6 mt-10">Hébergement</h3>
+                <p>Ce site est hébergé par : Hostinger France</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-black text-white py-10 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-10 mb-10">
+                <div>
+                    <img src="https://i.ibb.co/wZTDD5Zx/logo-renaissance.png" alt="Logo Renaissance Ka-Maaya" class="h-20 mb-4">
+                    <p class="mb-4">Renaissance Ka-Maaya œuvre pour la revitalisation des valeurs ancestrales africaines et la promotion de la culture, la spiritualité et les traditions.</p>
+                    <div class="flex">
+                        <a href="https://facebook.com/rkamaaya" target="_blank" class="mr-4 hover:text-red-600 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com/rkamaaya" target="_blank" class="mr-4 hover:text-red-600 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://instagram.com/rkamaaya" target="_blank" class="mr-4 hover:text-red-600 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://youtube.com/rkamaaya" target="_blank" class="hover:text-red-600 transition-colors">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Navigation</h4>
+                    <ul>
+                        <li class="mb-2"><a href="#home" class="hover:text-red-600 transition-colors">Accueil</a></li>
+                        <li class="mb-2"><a href="#about" class="hover:text-red-600 transition-colors">À propos</a></li>
+                        <li class="mb-2"><a href="#actions" class="hover:text-red-600 transition-colors">Nos actions</a></li>
+                        <li class="mb-2"><a href="#support" class="hover:text-red-600 transition-colors">Nous soutenir</a></li>
+                        <li class="mb-2"><a href="#contact" class="hover:text-red-600 transition-colors">Contact</a></li>
+                        <li><a href="#legal" class="hover:text-red-600 transition-colors">Mentions légales</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact</h4>
+                    <p class="mb-2"><i class="fas fa-map-marker-alt mr-2 text-red-600"></i> 123 Avenue de l'Afrique, 75001 Paris</p>
+                    <p class="mb-2"><i class="fas fa-phone mr-2 text-green-600"></i> +33 1 23 45 67 89</p>
+                    <p><i class="fas fa-envelope mr-2 text-yellow-500"></i> contact@renaissancekamaaya.com</p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-6 text-center text-sm">
+                <p>&copy; 6261 - 2025 Renaissance Ka-Maaya. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to top button -->
+    <button id="backToTop" class="fixed bottom-4 right-4 bg-red-600 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg z-50 opacity-0 transition-opacity">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        function toggleMobileMenu() {
+            mobileMenuBtn.classList.toggle('open');
+            mobileMenu.classList.toggle('open');
+            document.body.classList.toggle('overflow-hidden');
+        }
+        
+        function closeMobileMenu() {
+            mobileMenuBtn.classList.remove('open');
+            mobileMenu.classList.remove('open');
+            document.body.classList.remove('overflow-hidden');
+        }
+        
+        mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+        
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const mobileDarkModeToggle = document.getElementById('mobileDarkModeToggle');
+        const html = document.documentElement;
+        
+        // Check if user has already set a preference
+        if (localStorage.getItem('darkMode') === 'true') {
+            html.classList.add('dark');
+        }
+        
+        function toggleDarkMode() {
+            html.classList.toggle('dark');
+            localStorage.setItem('darkMode', html.classList.contains('dark'));
+        }
+        
+        darkModeToggle.addEventListener('click', toggleDarkMode);
+        mobileDarkModeToggle.addEventListener('click', toggleDarkMode);
+        
+        // Scroll Reveal Animation
+        const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
+        
+        function checkScrollReveal() {
+            scrollRevealElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight * 0.85) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+        
+        // Initial check on load
+        checkScrollReveal();
+        
+        window.addEventListener('scroll', checkScrollReveal);
+        
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        function handleBackToTopVisibility() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.style.opacity = '1';
+            } else {
+                backToTopButton.style.opacity = '0';
+            }
+        }
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        window.addEventListener('scroll', handleBackToTopVisibility);
+        
+        // Enhanced Parallax Effect
+        const parallaxSections = document.querySelectorAll('.parallax');
+        
+        function handleParallax() {
+            parallaxSections.forEach(section => {
+                const scrollPosition = window.pageYOffset;
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                
+                if (scrollPosition >= sectionTop - window.innerHeight && 
+                    scrollPosition <= sectionTop + sectionHeight) {
+                    const yOffset = (scrollPosition - sectionTop) * 0.4;
+                    section.style.backgroundPositionY = `calc(50% + ${yOffset}px)`;
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', handleParallax);
+        
+        // SEO Schema Markup
+        const schemaScript = document.createElement('script');
+        schemaScript.type = 'application/ld+json';
+        const schemaData = {
+            "@context": "https://schema.org",
+            "@type": "NGO",
+            "name": "Renaissance Ka-Maaya",
+            "url": "https://renaissancekamaaya.com",
+            "logo": "https://i.ibb.co/wZTDD5Zx/logo-renaissance.png",
+            "description": "Association dédiée à la revitalisation des valeurs ancestrales africaines, promouvant la culture, la spiritualité et les traditions.",
+            "address": {
+                "@type": "44 rue Jacques Offenbach",
+                "streetAddress": "",
+                "addressLocality": "Saint-Nazair",
+                "postalCode": "44600",
+                "addressCountry": "FR"
+            },
+            "telephone": "+33123456789",
+            "email": "contact@renaissance-kamaaya.com",
+            "sameAs": [
+                "https://facebook.com/rkamaaya",
+                "https://twitter.com/rkamaaya",
+                "https://instagram.com/rkamaaya"
+            ]
+        };
+        schemaScript.textContent = JSON.stringify(schemaData);
+        document.head.appendChild(schemaScript);
+    </script>
+</body>
+</html>
